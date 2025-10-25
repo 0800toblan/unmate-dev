@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Mate, DEV? - Contacto</title>
+
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="div-logo"><a class="logo" href="../index.html"><img class="logo" src="../img/logo_dev.png"></a></div>
+        <nav class="header-nav">
+            <ul>
+                <li>
+                    <a href="../index.html"><img src="../img/home_icon.png"></a>
+                </li>
+                <li>
+                    <a href="../index.html"><img src="../img/productos_icon.png"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1 class="titulo-contacto">Contactanos</h1>
+
+        <form 
+        class="form-contacto"
+        action="https://formspree.io/f/xqayoyeq" 
+        method="POST"
+        >
+
+            <div class="grupo-input">
+                <label for="email">Correo electrónico: </label>
+                <input id="email" type="email" name="email"/>
+            </div>
+
+            <div class="grupo-input">
+                <label for="mensaje">Tu consulta: </label>
+                <textarea id="mensaje" name="message"></textarea>
+            </div>
+
+            <div class="grupo-btn">
+                <button type="reset">RESET</button>
+                <button type="sumbit">ENVIAR</button>
+            </div>
+        </form>
+    </main>
+
+
+    <footer>
+        <div class="footer-p"><p>Realizado por Brian Bacha para Talento Tech 🧉🧑‍💻</p></div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="https://www.instagram.com/elvisordebrian/"><img src="../img/Instagram_Glyph_White.png"/></a></li>
+                    <li><a href="https://github.com/0800toblan/unmate-dev"><img src="../img/github-mark-white.png"/></a></li>
+                </ul>
+            </nav>
+    </footer>
+</body>
+
+</html>

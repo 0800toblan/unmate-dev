@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*? 1rem = 10px ?*/
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 1.6rem;
+
+    background: #0D1321;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2rem;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+h1 {
+    font-family: "Space Mono", monospace;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+h2 {
+    font-family: "Space Mono", monospace;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+h3 {
+    font-family: "Space Mono", monospace;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+p {
+    font-family: "Noto Sans", sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+/*?                     INICIO BOTÓN EXTERNO                !*/
+
+button {
+    font-size: 2rem;
+    color: #748CAB;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+button:focus,
+button:hover {
+    color: #fff;  
+}
+
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -0.5rem;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 0.6rem;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/*?                     FIN BOTÓN EXTERNO                   !*/
+
+header, footer {
+    background: #0D1321;
+    color: #fff;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*! ------------------------------------------------------- **/
+/*!                         HEADER                          **/
+/*! ------------------------------------------------------- **/
+
+
+.div-logo{
+    font-family: "Noto Sans", sans-serif;
+    margin-left: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.logo,
+.header-nav ul li a {
+    text-decoration: none;
+    font-size: 3rem;
+
+    width: 100%;
+    max-width: 15rem;
+    color: inherit;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.header-nav {
+    margin-right: 2rem;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.footer-nav ul li {
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    display: inline;
+}
+
+.footer-nav img {
+    width: 4rem;
+    height: 4rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.footer-p {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+/*! ------------------------------------------------------- **/
+/*!                 FORMULARIO DE CONTACTO                  **/
+/*! ------------------------------------------------------- **/
+
+.titulo-contacto {
+    margin: 2rem, 0;
+    margin-bottom: 2rem;
+}
+
+.form-contacto {
+    background: #0D1321;
+    color: #fff;
+    
+    width: 100%;
+    max-width: 50rem;
+    font-size: 2rem;
+    padding: 3rem;
+    border-radius: 0.75rem;
+
+    box-shadow: 0 10px 30px rgba(116, 140, 171, 0.15);
+}
+
+.grupo-input input, 
+.grupo-input textarea {
+    border: none;
+    background-color: transparent;
+    box-shadow: inset 0 10px 30px rgba(116, 140, 171, 0.08);
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-style: bold;
+    
+    border-radius: 1rem;
+    text-align: left;
+    text-indent: 0.75rem;
+    max-width: 100%;
+    min-width: 100%;
+    height: 3rem;
+    overflow: hidden;
+}
+
+.grupo-input textarea {
+    height: 10rem;
+    min-height: 10rem;
+
+    padding-top: 0.375rem;
+    padding-left: 0.75rem;
+    padding-bottom: 0.375rem;
+    padding-right: 0.75rem;
+
+    text-indent: 0;
+    text-align: justify;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.grupo-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/*! ------------------------------------------------------- **/
+/*!                         MEDIA                           **/
+/*! ------------------------------------------------------- **/
+
+@media (max-width:768px){
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+    }
+
+    header .div-logo,
+    .header-nav {
+        margin: 0;
+    }
+
+    footer .footer-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        width: 10%;
+        height: 50%;
+    }
+    
+    footer .footer-p {
+        flex-direction: row;
+        max-width: 60%;
+        max-height: 50%;
+        text-align: left;
+        align-items: baseline;
+    }
+}
